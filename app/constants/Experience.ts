@@ -1,6 +1,6 @@
 import dualinfor from '../assets/companyImgs/dualinfor.webp';
 import algoritmo from '../assets/companyImgs/algoritmo.webp';
-import mafraTv from '../assets/companyImgs/mafraTv.webp';
+import mafraTv from '../assets/companyImgs/mafratv.webp';
 import pontinhos from '../assets/companyImgs/pontinhos.webp';
 import knowledge from '../assets/companyImgs/knowledge.webp';
 
