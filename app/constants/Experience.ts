@@ -1,8 +1,9 @@
-import dualinfor from '@/app/assets/companyImgs/dualinfor.webp';
-import algoritmo from '@/app/assets/companyImgs/algoritmo.webp';
-import mafraTv from '@/app/assets/companyImgs/mafraTv.webp';
-import pontinhos from '@/app/assets/companyImgs/pontinhos.webp';
-import knowledge from '@/app/assets/companyImgs/knowledge.webp';
+import dualinfor from '../assets/companyImgs/dualinfor.webp';
+import algoritmo from '../assets/companyImgs/algoritmo.webp';
+import mafraTv from '../assets/companyImgs/mafraTv.webp';
+import pontinhos from '../assets/companyImgs/pontinhos.webp';
+import knowledge from '../assets/companyImgs/knowledge.webp';
+
 export const EXPERIENCE = [
     {
         company: 'Knowledge in Motion',

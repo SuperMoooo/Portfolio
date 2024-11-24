@@ -1,14 +1,14 @@
-import bipo from '@/app/assets/projectImgs/bipo.webp';
-import kubicDeal from '@/app/assets/projectImgs/kubicDeal.webp';
-import blackJackGame from '@/app/assets/projectImgs/blackJackGame.webp';
-import comicChars from '@/app/assets/projectImgs/comicChars.webp';
-import moT from '@/app/assets/projectImgs/moT.webp';
-import nbaSite from '@/app/assets/projectImgs/nbaSite.webp';
-import planetSite from '@/app/assets/projectImgs/planetWebImg.webp';
-import pokeGames from '@/app/assets/projectImgs/pokeGames.webp';
-import shoppingCart from '@/app/assets/projectImgs/shoppingCart.webp';
-import oldPortfolio from '@/app/assets/projectImgs/portfolio.webp';
-import slimeGame from '@/app/assets/projectImgs/slimeGame.webp';
+import bipo from '../assets/projectImgs/bipo.webp';
+import kubicDeal from '../assets/projectImgs/kubicDeal.webp';
+import blackJackGame from '../assets/projectImgs/blackJackGame.webp';
+import comicChars from '../assets/projectImgs/comicChars.webp';
+import moT from '../assets/projectImgs/moT.webp';
+import nbaSite from '../assets/projectImgs/nbaSite.webp';
+import planetSite from '../assets/projectImgs/planetWebImg.webp';
+import pokeGames from '../assets/projectImgs/pokeGames.webp';
+import shoppingCart from '../assets/projectImgs/shoppingCart.webp';
+import oldPortfolio from '../assets/projectImgs/portfolio.webp';
+import slimeGame from '../assets/projectImgs/slimeGame.webp';
 
 export const PROJECTS = [
     {
