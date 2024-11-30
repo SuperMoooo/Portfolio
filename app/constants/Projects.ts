@@ -41,7 +41,7 @@ export const PROJECTS = [
         projectTitle: 'MoT',
         img: moT,
         desc: 'Mobile app to track birthdays (with notification when its birthday), notes and tasks.',
-        demoLink: '/assets/apks/MoTV11.apk',
+        demoLink: '/apks/MoTV11.apk',
         githubLink: 'https://github.com/SuperMoooo/MoT',
         techs: ['React Native', 'Redux TK'],
     },
