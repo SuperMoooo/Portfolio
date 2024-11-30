@@ -20,7 +20,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
     return (
         <div className="grid grid-rows-[auto_1fr_auto_auto] gap-4 w-full justify-stretch">
-            <h1 className="sm:text-3xl text-2xl">{title}</h1>
+            <h1 className="sm:text-3xl text-2xl text-accent">{title}</h1>
             <picture className="border border-accent rounded-default 2xl:min-h-[30rem]  min-h-72 2xl:max-h-[34rem]  sm:max-h-[26rem] max-h-[22rem]">
                 <Image
                     src={img}

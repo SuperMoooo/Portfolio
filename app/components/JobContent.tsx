@@ -50,7 +50,7 @@ export default function JobContent({
                             : 'lg:text-right lg:mr-4'
                     } `}
                 >
-                    <h1 className="uppercase font-thin text-lg">
+                    <h1 className="uppercase font-thin text-lg text-accent">
                         {company} · {position}
                     </h1>
                 </div>

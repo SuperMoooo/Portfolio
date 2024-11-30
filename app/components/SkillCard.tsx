@@ -20,9 +20,9 @@ export default function SkillCard({ name, icon, experience }: SkillCardProps) {
                 />
             </picture>
             <div className="flex flex-col text-left  justify-center gap-1 w-full">
-                <h1 className="text-2xl font-thin">{name}</h1>
+                <h1 className="text-2xl font-thin text-accent">{name}</h1>
                 <div className="bg-accent w-full h-[0.8px]"></div>
-                <p className="text-lg">
+                <p className="text-lg text-nonPrimaryText">
                     {parseInt(experience) === 0 ? '> 1 year' : experience}
                 </p>
             </div>
