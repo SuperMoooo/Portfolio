@@ -7,12 +7,12 @@ import SkillsSection from './components/SkillsSection';
 export default function Home() {
     const date = new Date();
     return (
-        <div className="tracking-widest text-pretty bgCool">
+        <div className=" text-pretty bgCool">
             <div className="min-h-[100dvh] grid grid-rows-[auto_1fr] ">
                 <Navbar />
                 <HomeSection />
             </div>
-            <main className="md:px-16 px-4  flex flex-col gap-20 ">
+            <main className="container mx-auto sm:px-0 px-4  flex flex-col gap-20 ">
                 <ProjectsSection />
                 <ExperienceSection />
                 <SkillsSection />

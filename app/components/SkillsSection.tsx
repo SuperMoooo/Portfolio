@@ -17,6 +17,7 @@ export default function SkillsSection() {
                             name={skill.name}
                             icon={skill.icon}
                             experience={skill.experience}
+                            bgColor={skill.bgColor}
                         />
                     );
                 })}
