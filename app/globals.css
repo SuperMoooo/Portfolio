@@ -26,3 +26,18 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+.bgCool {
+    background-color: #151515;
+    opacity: 1;
+    background-image: linear-gradient(
+            #171717 0.6000000000000001px,
+            transparent 0.6000000000000001px
+        ),
+        linear-gradient(
+            to right,
+            #171717 0.6000000000000001px,
+            #151515 0.6000000000000001px
+        );
+    background-size: 12px 12px;
+}

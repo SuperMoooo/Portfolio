@@ -7,17 +7,21 @@ import SkillsSection from './components/SkillsSection';
 export default function Home() {
     const date = new Date();
     return (
-        <>
-            <div className="min-h-[100dvh] grid grid-rows-[auto_1fr]">
+        <div className="tracking-widest text-pretty bgCool">
+            <div className="min-h-[100dvh] grid grid-rows-[auto_1fr] ">
                 <Navbar />
                 <HomeSection />
             </div>
-            <main className="md:px-16 px-4 my-20 flex flex-col gap-20">
+            <main className="md:px-16 px-4  flex flex-col gap-20 ">
                 <ProjectsSection />
                 <ExperienceSection />
                 <SkillsSection />
-                <p>&copy; {date.getFullYear()} André Montoito</p>
+                <div className="flex items-center justify-center mb-10">
+                    <p className="text-accent">
+                        &copy; {date.getFullYear()} André Montoito
+                    </p>
+                </div>
             </main>
-        </>
+        </div>
     );
 }
