@@ -43,6 +43,12 @@ export const metadata: Metadata = {
     publisher: 'André Montoito',
     icons: {
         icon: '/assets/favIcon/icon.ico',
+        shortcut: '/assets/favIcon/icon.ico',
+        apple: '/assets/favIcon/icon.ico',
+        other: {
+            rel: 'apple-touch-icon-precomposed',
+            url: '/assets/favIcon/icon.ico',
+        },
     },
 };
 
