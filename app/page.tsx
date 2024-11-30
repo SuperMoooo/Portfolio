@@ -5,6 +5,7 @@ import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
 
 export default function Home() {
+    const date = new Date();
     return (
         <>
             <div className="min-h-[100dvh] grid grid-rows-[auto_1fr]">
@@ -15,6 +16,7 @@ export default function Home() {
                 <ProjectsSection />
                 <ExperienceSection />
                 <SkillsSection />
+                <p>&copy; {date.getFullYear()} André Montoito</p>
             </main>
         </>
     );
