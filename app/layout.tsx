@@ -41,6 +41,9 @@ export const metadata: Metadata = {
         },
     },
     publisher: 'André Montoito',
+    icons: {
+        icon: '/assets/favIcon/icon.ico',
+    },
 };
 
 export default function RootLayout({

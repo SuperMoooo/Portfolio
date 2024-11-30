@@ -1,12 +1,8 @@
 import React from 'react';
 
-export default function HomeSection({ curriculumSection }: any) {
+export default function HomeSection() {
     return (
-        <section
-            className="flex items-center justify-center flex-col"
-            id="0"
-            ref={curriculumSection}
-        >
+        <section className="flex items-center justify-center flex-col">
             <div className="mb-10 text-center">
                 <p className="md:text-3xl text-2xl font-thin">André Montoito</p>
                 <h1 className="lg:text-6xl md:text-5xl text-4xl text-gradient">
