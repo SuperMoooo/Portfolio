@@ -15,7 +15,7 @@ export default function SkillCard({
     bgColor,
 }: SkillCardProps) {
     return (
-        <div className="px-4 py-2 flex items-center  gap-4 rounded-default bg-[#191919] w-5/6 ">
+        <div className="px-4 py-2 flex items-center  gap-4 rounded-default bg-secondBg w-5/6 ">
             <picture
                 style={{ backgroundColor: bgColor }}
                 className=" p-3 rounded-default "

@@ -10,7 +10,7 @@ export default function ProjectsSection() {
                 <div className="bg-accent  md:w-2/5 3/5 h-[0.7px]"></div>
             </div>
 
-            <section className="grid xl:grid-cols-2 gap-10 grid-cols-1">
+            <section className="grid xl:grid-cols-2 gap-10 grid-cols-1 place-items-center">
                 {PROJECTS.map((project) => {
                     return (
                         <ProjectCard

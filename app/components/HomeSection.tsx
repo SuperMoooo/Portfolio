@@ -5,12 +5,14 @@ export default function HomeSection() {
     return (
         <section className="flex items-center justify-center flex-col">
             <div className="mb-10 text-center">
-                <p className="md:text-3xl text-2xl font-thin">André Montoito</p>
-                <h1 className="lg:text-6xl md:text-5xl text-5xl text-gradient">
+                <p className="md:text-3xl text-2xl font-thin name">
+                    André Montoito
+                </p>
+                <h1 className="lg:text-6xl md:text-5xl text-5xl text-gradient title">
                     Software Developer
                 </h1>
             </div>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
+            <div className="flex items-center justify-center gap-4 flex-wrap btns">
                 <CV_Button cv="CV_AndreMontoito.pdf" lang="pt" />
                 <CV_Button cv="CV_AndreMontoito_ENG.pdf" lang="en" />
             </div>

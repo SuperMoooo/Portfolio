@@ -13,6 +13,7 @@ export default {
                 secundary: '#36223B',
                 accent: '#D9D8FF',
                 nonPrimaryText: '#A6A6A6',
+                secondBg: '#191919',
             },
             borderRadius: {
                 default: '12px',

@@ -41,3 +41,31 @@ body {
         );
     background-size: 12px 12px;
 }
+
+.name {
+    opacity: 0;
+    animation: fadeUpAnimation 1s ease forwards;
+}
+.title {
+    opacity: 0;
+    animation: fadeUpAnimation 1s ease forwards;
+    animation-delay: 500ms;
+}
+
+.btns {
+    opacity: 0;
+    animation: fadeUpAnimation 1s ease forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes fadeUpAnimation {
+    0% {
+        transform: translateY(300%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
