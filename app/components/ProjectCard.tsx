@@ -30,10 +30,10 @@ export default function ProjectCard({
                     src={img}
                     alt={title}
                     width={1280}
-                    className=" rounded-default h-full w-full object-cover object-center"
+                    className=" rounded-default h-full w-full object-cover object-center aspect-square"
                 />
             </a>
-            <h3 className="text-nonPrimaryText text-md">{desc}</h3>
+            <h3 className="text-nonPrimaryText text-md ">{desc}</h3>
             <div className="flex justify-between border-t border-accent *:mt-4 items-start sm:h-40 h-64 gap-4">
                 <div className="flex items-center justify-center gap-6 sm:flex-row flex-col *:flex *:items-center *:justify-center *:font-thin *:gap-3 *:rounded-default *:p-2 *:text-xl *:w-40 *:transition-transform *:duration-300">
                     <a
