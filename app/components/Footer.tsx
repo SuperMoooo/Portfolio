@@ -6,14 +6,17 @@ export default function Footer() {
     const date = new Date();
     useEffect(() => {
         const interval = setInterval(() => {
+            const currentDate = new Date(); // Create a new Date object
             setTime(
-                date.toLocaleTimeString('en-PT', {
+                currentDate.toLocaleTimeString('en-PT', {
                     timeZone: 'Europe/Lisbon',
                 })
             );
         }, 1000);
+
         return () => clearInterval(interval);
     }, []);
+
     return (
         <section className="flex items-center justify-between  mb-10 *:text-accent *:text-center">
             <p>{time}</p>
