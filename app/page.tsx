@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
+import Footer from './components/Footer';
 
 export default function Home() {
-    const date = new Date();
     return (
         <div className=" text-pretty bgCool">
             <div className="min-h-[100dvh] grid grid-rows-[auto_1fr] ">
@@ -16,11 +16,7 @@ export default function Home() {
                 <ProjectsSection />
                 <ExperienceSection />
                 <SkillsSection />
-                <div className="flex items-center justify-center mb-10">
-                    <p className="text-accent">
-                        &copy; {date.getFullYear()} André Montoito
-                    </p>
-                </div>
+                <Footer />
             </main>
         </div>
     );
