@@ -11,8 +11,7 @@ export const EXPERIENCE = [
         date: '2024',
         img: knowledge,
         desc: [
-            'Preparation for migrating a complete car sales system from the FoxPro programming language to C# blazor.',
-            'Configuration of mobile applications to receive notifications (Android, IOS).',
+            'Configuração, manutenção e publicação de aplicações mobile (Android, IOS).',
         ],
     },
     {
