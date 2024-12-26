@@ -11,10 +11,10 @@ export default function ProjectsSection() {
             </div>
 
             <section className="grid xl:grid-cols-2 gap-10 grid-cols-1 place-items-center">
-                {PROJECTS.map((project) => {
+                {PROJECTS.map((project, index) => {
                     return (
                         <ProjectCard
-                            key={project.id}
+                            key={index}
                             title={project.projectTitle}
                             img={project.img}
                             desc={project.desc}

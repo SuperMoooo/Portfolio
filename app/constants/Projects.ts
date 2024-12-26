@@ -9,10 +9,10 @@ import pokeGames from '../assets/projectImgs/pokeGames.webp';
 import shoppingCart from '../assets/projectImgs/shoppingCart.webp';
 import oldPortfolio from '../assets/projectImgs/portfolio.webp';
 import slimeGame from '../assets/projectImgs/slimeGame.webp';
+import compras from '../assets/projectImgs/compras.webp';
 
 export const PROJECTS = [
     {
-        id: 1,
         projectTitle: 'Old Portfolio',
         img: oldPortfolio,
         desc: 'Old Portfolio.',
@@ -21,7 +21,15 @@ export const PROJECTS = [
         techs: ['React', 'TailwindCSS'],
     },
     {
-        id: 2,
+        projectTitle: 'Compras',
+        img: compras,
+        desc: 'This application was developed to facilitate the organization of group purchases, ideal for families or people who share the same house.Each group can create multiple shopping lists, where products and quantities are added and updated. Any group member can access and edit the lists, ensuring everyone is informed about purchasing needs.',
+        demoLink:
+            'https://play.google.com/store/apps/details?id=com.supermo.compras&hl=pt_PT',
+        githubLink: '',
+        techs: ['React Native', 'TypeScript', 'Redux TK', 'Firebase'],
+    },
+    {
         projectTitle: 'PokeGames',
         img: pokeGames,
         desc: 'Guess the unknown Pokémon, Stronger or Weaker (with online leaderboard), Guess the blur Pokémon.',
@@ -37,7 +45,6 @@ export const PROJECTS = [
         ],
     },
     {
-        id: 3,
         projectTitle: 'MoT',
         img: moT,
         desc: 'Mobile app to track birthdays (with notification when its birthday), notes and tasks.',
@@ -46,7 +53,6 @@ export const PROJECTS = [
         techs: ['React Native', 'Redux TK'],
     },
     {
-        id: 4,
         projectTitle: 'Kubic Deal',
         img: kubicDeal,
         desc: 'A website made for a client for the start of the company.',
@@ -55,7 +61,6 @@ export const PROJECTS = [
         techs: ['HTML', 'CSS', 'JavaScript'],
     },
     {
-        id: 5,
         projectTitle: 'Comic characters info',
         img: comicChars,
         desc: 'Comic Characters Info (Appearance, biography, powerstats, etc...).',
@@ -65,7 +70,6 @@ export const PROJECTS = [
     },
 
     {
-        id: 6,
         projectTitle: 'Planets Site',
         img: planetSite,
         desc: 'A website with some information about the planets of our galaxy.',
@@ -74,7 +78,6 @@ export const PROJECTS = [
         techs: ['HTML', 'CSS', 'JavaScript'],
     },
     {
-        id: 7,
         projectTitle: 'Shopping Cart',
         img: shoppingCart,
         desc: 'Shopping Cart to learn Redux TK',
@@ -83,7 +86,6 @@ export const PROJECTS = [
         techs: ['Next.js', 'Redux TK', 'TailwindCSS'],
     },
     {
-        id: 8,
         projectTitle: 'NBA teams site',
         img: nbaSite,
         desc: 'NBA teams info made using API data',
@@ -92,7 +94,6 @@ export const PROJECTS = [
         techs: ['React', 'TailwindCSS', 'API'],
     },
     {
-        id: 9,
         projectTitle: 'Slime Game',
         img: slimeGame,
         desc: 'A game made for the final project of the course.',
@@ -101,7 +102,6 @@ export const PROJECTS = [
         techs: ['GDevelop'],
     },
     {
-        id: 10,
         projectTitle: 'Bipo Game',
         img: bipo,
         desc: 'Game developed within the scope of the game development discipline.',
@@ -110,7 +110,6 @@ export const PROJECTS = [
         techs: ['Unreal Engine 5'],
     },
     {
-        id: 11,
         projectTitle: 'BlackJack game',
         img: blackJackGame,
         desc: 'BlackJack game with infinite money and no split cards',
