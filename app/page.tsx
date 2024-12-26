@@ -12,7 +12,7 @@ export default function Home() {
                 <Navbar />
                 <HomeSection />
             </div>
-            <main className="container mx-auto sm:px-0 px-4  flex flex-col gap-20 ">
+            <main className=" mx-20 items-center  sm:px-0 px-4  flex flex-col gap-20 ">
                 <ProjectsSection />
                 <ExperienceSection />
                 <SkillsSection />
