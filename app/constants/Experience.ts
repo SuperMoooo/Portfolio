@@ -11,7 +11,7 @@ export const EXPERIENCE = [
         date: '2024',
         img: knowledge,
         desc: [
-            'Configuração, manutenção e publicação de aplicações mobile (Android, IOS).',
+            'Configuration, maintenance and publication of mobile applications (Android, IOS).',
         ],
     },
     {

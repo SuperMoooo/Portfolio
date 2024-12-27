@@ -23,7 +23,7 @@ export const PROJECTS = [
     {
         projectTitle: 'Compras',
         img: compras,
-        desc: 'This application was developed to facilitate the organization of group purchases, ideal for families or people who share the same house.Each group can create multiple shopping lists, any group member can access and edit the lists.',
+        desc: 'This application was developed to facilitate the organization of group purchases, ideal for families or people who share the same house. Each group can create multiple shopping lists, any group member can access and edit the lists.',
         demoLink:
             'https://play.google.com/store/apps/details?id=com.supermo.compras&hl=pt_PT',
         githubLink: '',
