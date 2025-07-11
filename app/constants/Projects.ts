@@ -1,25 +1,28 @@
 import bipo from '../assets/projectImgs/bipo.webp';
-import kubicDeal from '../assets/projectImgs/kubicDeal.webp';
 import blackJackGame from '../assets/projectImgs/blackJackGame.webp';
 import comicChars from '../assets/projectImgs/comicChars.webp';
+import compras from '../assets/projectImgs/compras.webp';
+import gesti from '../assets/projectImgs/gesti.webp';
+import kubicDeal from '../assets/projectImgs/kubicDeal.webp';
 import moT from '../assets/projectImgs/moT.webp';
 import nbaSite from '../assets/projectImgs/nbaSite.webp';
 import planetSite from '../assets/projectImgs/planetWebImg.webp';
 import pokeGames from '../assets/projectImgs/pokeGames.webp';
-import shoppingCart from '../assets/projectImgs/shoppingCart.webp';
 import oldPortfolio from '../assets/projectImgs/portfolio.webp';
+import shoppingCart from '../assets/projectImgs/shoppingCart.webp';
 import slimeGame from '../assets/projectImgs/slimeGame.webp';
-import compras from '../assets/projectImgs/compras.webp';
 
 export const PROJECTS = [
     {
-        projectTitle: 'Old Portfolio',
-        img: oldPortfolio,
-        desc: 'Old Portfolio.',
-        demoLink: 'https://supermoooo.github.io/MyPortfolio/',
-        githubLink: 'https://github.com/SuperMoooo/MyPortfolio',
-        techs: ['React', 'TailwindCSS'],
+        projectTitle: 'Gesti',
+        img: gesti,
+        desc: 'Gesti is a productivity application created for those who want to keep their personal, professional and school lives organized without complications.',
+        demoLink:
+            'https://play.google.com/store/apps/details?id=com.supermo.gesti',
+        githubLink: '',
+        techs: ['Flutter', 'Firebase'],
     },
+
     {
         projectTitle: 'Compras',
         img: compras,
@@ -51,6 +54,14 @@ export const PROJECTS = [
         demoLink: '/apks/MoTV11.apk',
         githubLink: 'https://github.com/SuperMoooo/MoT',
         techs: ['React Native', 'Redux TK'],
+    },
+    {
+        projectTitle: 'Old Portfolio',
+        img: oldPortfolio,
+        desc: 'Old Portfolio.',
+        demoLink: 'https://supermoooo.github.io/MyPortfolio/',
+        githubLink: 'https://github.com/SuperMoooo/MyPortfolio',
+        techs: ['React', 'TailwindCSS'],
     },
     {
         projectTitle: 'Kubic Deal',

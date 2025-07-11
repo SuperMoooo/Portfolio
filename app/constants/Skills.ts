@@ -1,26 +1,31 @@
-import html from '../assets/techsImgs/html.webp';
-import css from '../assets/techsImgs/css.webp';
-import js from '../assets/techsImgs/js.webp';
-import react from '../assets/techsImgs/react.webp';
-import tailwind from '../assets/techsImgs/tailwind.webp';
-import python from '../assets/techsImgs/python.webp';
-import cSharp from '../assets/techsImgs/cSharp.webp';
-import node from '../assets/techsImgs/node.webp';
-import sql from '../assets/techsImgs/sql.webp';
-import vsCode from '../assets/techsImgs/vsCode.webp';
-import vs from '../assets/techsImgs/vs.webp';
 import ai from '../assets/techsImgs/ai.webp';
-import pr from '../assets/techsImgs/pr.webp';
-import git from '../assets/techsImgs/git.webp';
-import redux from '../assets/techsImgs/redux.webp';
-import nextjs from '../assets/techsImgs/nextjs.webp';
-import typeScript from '../assets/techsImgs/typeScript.webp';
-import figma from '../assets/techsImgs/figma.webp';
-import blazor from '../assets/techsImgs/blazor.webp';
 import bootstrap from '../assets/techsImgs/bootstrap.webp';
+import cSharp from '../assets/techsImgs/cSharp.webp';
+import css from '../assets/techsImgs/css.webp';
+import figma from '../assets/techsImgs/figma.webp';
+import flutter from '../assets/techsImgs/flutter.webp';
+import git from '../assets/techsImgs/git.webp';
+import html from '../assets/techsImgs/html.webp';
+import js from '../assets/techsImgs/js.webp';
+import nextjs from '../assets/techsImgs/nextjs.webp';
+import node from '../assets/techsImgs/node.webp';
+import pr from '../assets/techsImgs/pr.webp';
+import python from '../assets/techsImgs/python.webp';
+import react from '../assets/techsImgs/react.webp';
+import sql from '../assets/techsImgs/sql.webp';
+import tailwind from '../assets/techsImgs/tailwind.webp';
+import typeScript from '../assets/techsImgs/typeScript.webp';
+import vs from '../assets/techsImgs/vs.webp';
+import vsCode from '../assets/techsImgs/vsCode.webp';
 
 const date = new Date();
 export const SKILLS = [
+    {
+        name: 'Flutter',
+        icon: flutter,
+        experience: date.getFullYear() - 2024 + ' years',
+        bgColor: '#2A2E36',
+    },
     {
         name: 'React & React Native',
         icon: react,
@@ -88,12 +93,6 @@ export const SKILLS = [
         bgColor: '#373737',
     },
     {
-        name: 'Redux TK',
-        icon: redux,
-        experience: date.getFullYear() - 2023 + ' years',
-        bgColor: '#2b2736',
-    },
-    {
         name: 'SQL',
         icon: sql,
         experience: date.getFullYear() - 2021 + ' years',
@@ -122,12 +121,6 @@ export const SKILLS = [
         icon: cSharp,
         experience: date.getFullYear() - 2022 + ' years',
         bgColor: '#292828',
-    },
-    {
-        name: 'Blazor',
-        icon: blazor,
-        experience: date.getFullYear() - 2024 + ' years',
-        bgColor: '#ffffff',
     },
     {
         name: 'Adobe Illustrator',
