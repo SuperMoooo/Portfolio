@@ -18,7 +18,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <section className="flex items-center justify-between gap-10  mb-10 *:text-accent *:text-center">
+        <section className="flex items-center justify-between gap-10  mb-10 *:text-accent *:text-center w-full">
             <p>{time}</p>
             <p>&copy; {date.getFullYear()} André Montoito</p>
             <p>🇵🇹</p>
