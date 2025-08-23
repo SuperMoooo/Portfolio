@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 
 interface ProjectCardProps {
     title: string;
@@ -24,7 +23,7 @@ export default function ProjectCard({
             <a
                 href={demoLink}
                 target="_blank"
-                className="border border-accent rounded-default 2xl:min-h-[30rem]  min-h-72 2xl:max-h-[34rem]  sm:max-h-[26rem] max-h-[22rem]"
+                className="border border-accent rounded-default 2xl:min-h-[28rem]  min-h-70 2xl:max-h-[20rem]  sm:max-h-[24rem] max-h-[20rem]"
             >
                 <Image
                     src={img}

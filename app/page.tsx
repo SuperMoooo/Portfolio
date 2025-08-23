@@ -1,9 +1,9 @@
+import ExperienceSection from './components/ExperienceSection';
+import Footer from './components/Footer';
 import HomeSection from './components/HomeSection';
 import Navbar from './components/Navbar';
 import ProjectsSection from './components/ProjectsSection';
-import ExperienceSection from './components/ExperienceSection';
 import SkillsSection from './components/SkillsSection';
-import Footer from './components/Footer';
 
 export default function Home() {
     return (
@@ -12,7 +12,7 @@ export default function Home() {
                 <Navbar />
                 <HomeSection />
             </div>
-            <main className=" sm:mx-20 mx-2 items-center  sm:px-0 px-4  flex flex-col gap-20 ">
+            <main className=" sm:mx-10 mx-2 items-center  sm:px-0 px-4  flex flex-col gap-20 ">
                 <ProjectsSection />
                 <ExperienceSection />
                 <SkillsSection />

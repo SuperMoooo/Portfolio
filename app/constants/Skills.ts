@@ -1,5 +1,4 @@
 import ai from '../assets/techsImgs/ai.webp';
-import bootstrap from '../assets/techsImgs/bootstrap.webp';
 import cSharp from '../assets/techsImgs/cSharp.webp';
 import css from '../assets/techsImgs/css.webp';
 import figma from '../assets/techsImgs/figma.webp';
@@ -71,7 +70,7 @@ export const SKILLS = [
     {
         name: 'Node.js',
         icon: node,
-        experience: date.getFullYear() - 2023 + ' years',
+        experience: 2 + ' years',
         bgColor: '#393939',
     },
     {
@@ -80,12 +79,7 @@ export const SKILLS = [
         experience: date.getFullYear() - 2022 + ' years',
         bgColor: '#1D2434',
     },
-    {
-        name: 'Bootstrap',
-        icon: bootstrap,
-        experience: date.getFullYear() - 2024 + ' years',
-        bgColor: '#5A4583',
-    },
+
     {
         name: 'Python',
         icon: python,
@@ -95,7 +89,7 @@ export const SKILLS = [
     {
         name: 'SQL',
         icon: sql,
-        experience: date.getFullYear() - 2021 + ' years',
+        experience: 2 + ' years',
         bgColor: '#0D2136',
     },
     {
@@ -113,13 +107,13 @@ export const SKILLS = [
     {
         name: 'VS',
         icon: vs,
-        experience: date.getFullYear() - 2022 + ' years',
+        experience: 3 + ' years',
         bgColor: '#292828',
     },
     {
         name: 'C#',
         icon: cSharp,
-        experience: date.getFullYear() - 2022 + ' years',
+        experience: 2 + ' years',
         bgColor: '#292828',
     },
     {
@@ -131,7 +125,7 @@ export const SKILLS = [
     {
         name: 'Adobe Premiere',
         icon: pr,
-        experience: date.getFullYear() - 2019 + ' years',
+        experience: 4 + ' years',
         bgColor: '#605CA8',
     },
 ];

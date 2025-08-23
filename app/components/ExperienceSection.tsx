@@ -1,4 +1,3 @@
-import React from 'react';
 import { EXPERIENCE } from '../constants/Experience';
 import JobContent from './JobContent';
 
@@ -6,8 +5,7 @@ export default function ExperienceSection() {
     return (
         <section>
             <div className="gap-2 flex  justify-center flex-col mb-10">
-                <h1 className="text-4xl">Experience</h1>
-                <div className="bg-accent md:w-2/5 3/5 h-[0.7px]"></div>
+                <h1 className="text-4xl uppercase font-bold">Experience</h1>
             </div>
             <div className="mt-40 flex flex-col space-y-12 lg:px-24 px-6 lg:relative">
                 <div

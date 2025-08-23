@@ -5,11 +5,10 @@ export default function ProjectsSection() {
     return (
         <section className="mb-[-100px]">
             <div className="gap-2 flex  justify-center flex-col mb-10">
-                <h1 className="text-4xl">Projects</h1>
-                <div className="bg-accent  md:w-2/5 3/5 h-[0.7px]"></div>
+                <h1 className="text-4xl uppercase font-bold">Projects</h1>
             </div>
 
-            <section className="grid xl:grid-cols-2 gap-20 grid-cols-1 place-items-center mx-auto px-20">
+            <section className="grid xl:grid-cols-2 sm:gap-20 gap-4 grid-cols-1 place-items-center lg:px-20 px-4">
                 {PROJECTS.map((project, index) => {
                     return (
                         <ProjectCard
