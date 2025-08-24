@@ -9,7 +9,7 @@ export default function HomeSection() {
                     André Montoito
                 </p>
                 <h1 className="lg:text-6xl md:text-5xl text-5xl text-gradient title">
-                    Software Developer
+                    Mobile / Front-end Developer
                 </h1>
             </div>
             <div className="flex items-center justify-center gap-4 flex-wrap btns">
