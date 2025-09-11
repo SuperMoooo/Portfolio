@@ -1,17 +1,31 @@
-import dualinfor from '../assets/companyImgs/dualinfor.webp';
 import algoritmo from '../assets/companyImgs/algoritmo.webp';
+import dualinfor from '../assets/companyImgs/dualinfor.webp';
+import ial from '../assets/companyImgs/ial.webp';
+import knowledge from '../assets/companyImgs/knowledge.webp';
 import mafraTv from '../assets/companyImgs/mafratv.webp';
 import pontinhos from '../assets/companyImgs/pontinhos.webp';
-import knowledge from '../assets/companyImgs/knowledge.webp';
 
 export const EXPERIENCE = [
     {
-        company: 'Knowledge in Motion',
-        position: 'Junior Developer',
+        company: 'IAL Logistics',
+        position: 'Flutter Developer',
+        date: '2025',
+        img: ial,
+        desc: [
+            'Automobile management app: VIN code reading (manual input, QR scan, or OCR), vehicle check-in/out, and detailed vehicle info.',
+        ],
+    },
+    {
+        company: 'Tempus Tecnologia',
+        position: 'Lead Flutter Developer',
         date: '2024',
         img: knowledge,
         desc: [
             'Configuration, maintenance and publication of mobile applications (Android, IOS).',
+            'Brought Flutter to the company, led the adoption of the technology, and became the main point of reference for mobile development. Took initiative to learn both basic and advanced Flutter concepts, and am now responsible for guiding and mentoring teammates in the use of the framework.',
+            'Law firm app: access to legal matters, in-app lawyer calls, calendar scheduling, messaging, and document sharing.',
+            'Incubator staff app: request maintenance with images, view incubated companies and news, request vehicles, and book meeting rooms.',
+            'API development in Python (FastAPI) for an app project.',
         ],
     },
     {
