@@ -20,7 +20,7 @@ export const PROJECTS = [
         demoLink:
             'https://play.google.com/store/apps/details?id=com.supermo.gesti',
         githubLink: '',
-        techs: ['Flutter', 'Firebase'],
+        techs: ['Flutter', 'Firebase', 'Riverpod'],
     },
 
     {
