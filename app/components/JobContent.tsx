@@ -1,88 +1,58 @@
 import Image from 'next/image';
-import React from 'react';
+import type { Job } from '../constants/Experience';
+import TechChips from './TechChips';
 
-interface JobContentProps {
-    company: string;
-    position: string;
-    date: string;
-    img: any;
-    desc: string[];
-    side: number;
-    rowStart: number;
-}
+export default function JobContent({ job }: { job: Job }) {
+    const current = job.roles.some((role) => role.current);
 
-export default function JobContent({
-    company,
-    position,
-    date,
-    img,
-    desc,
-    side,
-    rowStart,
-}: JobContentProps) {
     return (
-        <div
-            style={{ gridRowStart: rowStart }}
-            className={`grid grid-rows-[auto_auto_1fr] my-8 w-full h-full border-l-[1px]  border-accent ${
-                side === 0
-                    ? 'lg:col-start-1  lg:border-r-[1px] lg:border-l-transparent lg:border-accent'
-                    : ' lg:col-start-2 lg:ml-[-0.1rem] lg:border-l-[1px] lg:border-accent'
-            } `}
-        >
-            <div
-                className={`flex justify-between ${
-                    side === 0 ? 'flex-row' : 'lg:flex-row-reverse'
-                }`}
-            >
-                <picture className="pl-2 lg:pl-0 ">
-                    <Image
-                        src={img}
-                        alt={img}
-                        width={100}
-                        className="object-cover rounded-lg w-14 h-14 "
-                        rel="preload"
-                    />
-                </picture>
-                <div
-                    className={`grid items-end text-left flex-1 ml-4 lg:ml-0 ${
-                        side === 0
-                            ? 'text-left lg:ml-4'
-                            : 'lg:text-right lg:mr-4'
-                    } `}
-                >
-                    <h1 className="uppercase font-thin text-lg text-accent">
-                        {company} · {position}
-                    </h1>
-                </div>
-                <div
-                    className={`${
-                        side === 0
-                            ? 'text-right mr-[0.5rem]'
-                            : 'lg:text-left lg:ml-[0.5rem]'
-                    } grid items-end   text-right`}
-                >
-                    <h2 className="font-thin">{date}</h2>
-                </div>
+        <li className="relative pl-12 sm:pl-16">
+            <div className="absolute left-0 top-0 grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white text-xs font-bold text-black sm:h-11 sm:w-11">
+                {job.img ? (
+                    <Image src={job.img} alt={`${job.company} logo`} width={88} height={88} className="h-full w-full object-cover" />
+                ) : (
+                    <span className="grid h-full w-full place-items-center bg-gradient-to-br from-accent to-primary">{job.initials}</span>
+                )}
             </div>
-            <div>
-                <div className="w-full h-[1px] bg-accent my-4"></div>
-                <ul
-                    className={`font-thin pl-8   ${
-                        side === 0
-                            ? ' text-left lg:pl-0'
-                            : 'lg:text-right lg:pl-2'
-                    }`}
-                >
-                    {desc.map((item, index) => (
-                        <li
-                            className="lg:list-none list-disc text-sm"
-                            key={index}
-                        >
-                            {item}
-                        </li>
+
+            <div className="rounded-[1.25rem] border border-white/10 bg-secondBg p-4 sm:p-6">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <h3 className="text-lg font-semibold sm:text-xl">{job.company}</h3>
+                    {current && (
+                        <span className="rounded-full bg-emerald-400/10 px-2 py-0.5 text-[11px] font-medium text-emerald-300">Now</span>
+                    )}
+                </div>
+                <p className="text-xs text-nonPrimaryText">{job.location}</p>
+
+                <div className="mt-4 flex flex-col gap-6">
+                    {job.roles.map((role) => (
+                        <div key={role.title + role.period} className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                                <h4 className="font-medium text-accent">{role.title}</h4>
+                                <p className="shrink-0 font-mono text-xs text-nonPrimaryText">{role.period}</p>
+                            </div>
+                            <ul className="flex list-disc flex-col gap-1.5 pl-4 text-sm text-nonPrimaryText marker:text-primary/60">
+                                {role.bullets.map((bullet) => (
+                                    <li key={bullet}>{bullet}</li>
+                                ))}
+                            </ul>
+                            {role.highlights?.map((highlight) => (
+                                <div key={highlight.name} className="rounded-default border border-white/5 bg-white/[0.03] p-3">
+                                    <p className="text-sm font-medium">{highlight.name}</p>
+                                    <ul className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-nonPrimaryText">
+                                        {highlight.points.map((point) => (
+                                            <li key={point} className="before:mr-1.5 before:text-primary/60 before:content-['▸']">
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                            {role.techs && <TechChips techs={role.techs} />}
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
-        </div>
+        </li>
     );
 }

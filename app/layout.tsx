@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Rubik } from 'next/font/google';
 import './globals.css';
 
@@ -7,18 +7,26 @@ const rubik = Rubik({
     display: 'swap',
 });
 
+export const viewport: Viewport = {
+    themeColor: '#151515',
+    width: 'device-width',
+    initialScale: 1,
+    viewportFit: 'cover',
+};
+
 export const metadata: Metadata = {
-    title: 'André Montoito Portfolio | Projects, Skills & Professional Experience',
+    title: 'André Montoito · Mobile Engineer (Flutter)',
     description:
-        "Discover André Montoito's portfolio showcasing innovative projects, technical skills, and experience. See how I can add value to your team or project.",
+        'André Montoito, a Flutter Mobile Engineer from Portugal shipping Android, iOS and Huawei apps. Apps, open-source work (moarch), experience and stack.',
     keywords: [
         'portfolio',
-        'projects',
-        'professional experience',
-        'technical skills',
-        'software developer',
-        'web developer',
-        'creative work',
+        'Flutter developer',
+        'mobile engineer',
+        'Dart',
+        'Android',
+        'iOS',
+        'moarch',
+        'clean architecture',
         'André Montoito',
     ],
     authors: [

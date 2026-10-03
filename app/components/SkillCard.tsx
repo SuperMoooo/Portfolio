@@ -1,40 +1,11 @@
 import Image from 'next/image';
-import React from 'react';
+import type { Skill } from '../constants/Skills';
 
-interface SkillCardProps {
-    name: string;
-    icon: any;
-    experience: string;
-    bgColor: string;
-}
-
-export default function SkillCard({
-    name,
-    icon,
-    experience,
-    bgColor,
-}: SkillCardProps) {
+export default function SkillCard({ skill }: { skill: Skill }) {
     return (
-        <div className="px-4 py-2 flex items-center  gap-4 rounded-default bg-secondBg w-5/6 ">
-            <picture
-                style={{ backgroundColor: bgColor }}
-                className=" p-3 rounded-default "
-            >
-                <Image
-                    src={icon}
-                    alt={name}
-                    width={55}
-                    height={55}
-                    className="object-cover object-center "
-                />
-            </picture>
-            <div className="flex flex-col text-left  justify-center gap-2 w-full">
-                <h1 className="text-lg font-thin text-accent">{name}</h1>
-                <div className="bg-nonPrimaryText w-full h-[0.8px]"></div>
-                <p className="text-sm text-nonPrimaryText">
-                    {parseInt(experience) === 0 ? '> 1 year' : experience}
-                </p>
-            </div>
-        </div>
+        <li className="flex min-h-[40px] items-center gap-2 rounded-default border border-white/10 bg-black/20 px-3 py-1.5 text-sm">
+            {skill.icon && <Image src={skill.icon} alt="" width={20} height={20} className="h-5 w-5 object-contain" />}
+            {skill.name}
+        </li>
     );
 }

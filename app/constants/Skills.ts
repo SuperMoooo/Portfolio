@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import ai from '../assets/techsImgs/ai.webp';
 import cSharp from '../assets/techsImgs/cSharp.webp';
 import css from '../assets/techsImgs/css.webp';
@@ -11,121 +12,85 @@ import node from '../assets/techsImgs/node.webp';
 import pr from '../assets/techsImgs/pr.webp';
 import python from '../assets/techsImgs/python.webp';
 import react from '../assets/techsImgs/react.webp';
+import redux from '../assets/techsImgs/redux.webp';
 import sql from '../assets/techsImgs/sql.webp';
 import tailwind from '../assets/techsImgs/tailwind.webp';
 import typeScript from '../assets/techsImgs/typeScript.webp';
-import vs from '../assets/techsImgs/vs.webp';
 import vsCode from '../assets/techsImgs/vsCode.webp';
 
-const date = new Date();
-export const SKILLS = [
-    {
-        name: 'Flutter',
-        icon: flutter,
-        experience: date.getFullYear() - 2024 + ' years',
-        bgColor: '#2A2E36',
-    },
-    {
-        name: 'React & React Native',
-        icon: react,
-        experience: date.getFullYear() - 2022 + ' years',
-        bgColor: '#2A2E36',
-    },
-    {
-        name: 'TypeScript',
-        icon: typeScript,
-        experience: date.getFullYear() - 2023 + ' years',
-        bgColor: '#103766',
-    },
-    {
-        name: 'HTML',
-        icon: html,
-        experience: date.getFullYear() - 2019 + ' years',
-        bgColor: '#8c573a',
-    },
-    {
-        name: 'CSS',
-        icon: css,
-        experience: date.getFullYear() - 2019 + ' years',
-        bgColor: '#341354',
-    },
-    {
-        name: 'JavaScript',
-        icon: js,
-        experience: date.getFullYear() - 2020 + ' years',
-        bgColor: '#F1DC55',
-    },
-    {
-        name: 'Next.js',
-        icon: nextjs,
-        experience: date.getFullYear() - 2023 + ' years',
-        bgColor: '#3E3E3E',
-    },
-    {
-        name: 'Figma',
-        icon: figma,
-        experience: date.getFullYear() - 2024 + ' years',
-        bgColor: '#1E1E1E',
-    },
-    {
-        name: 'Node.js',
-        icon: node,
-        experience: 2 + ' years',
-        bgColor: '#393939',
-    },
-    {
-        name: 'TailwindCSS',
-        icon: tailwind,
-        experience: date.getFullYear() - 2022 + ' years',
-        bgColor: '#1D2434',
-    },
+export interface Skill {
+    name: string;
+    icon?: StaticImageData;
+}
 
+export interface SkillGroup {
+    title: string;
+    primary?: boolean;
+    skills: Skill[];
+}
+
+export const STACK: SkillGroup[] = [
     {
-        name: 'Python',
-        icon: python,
-        experience: date.getFullYear() - 2023 + ' years',
-        bgColor: '#373737',
+        title: 'Mobile',
+        primary: true,
+        skills: [
+            { name: 'Flutter', icon: flutter },
+            { name: 'Dart' },
+            { name: 'Riverpod' },
+            { name: 'Bloc' },
+            { name: 'Provider' },
+            { name: 'Firebase' },
+            { name: 'FVM' },
+            { name: 'React Native', icon: react },
+            { name: '.NET MAUI' },
+            { name: 'Android · iOS · Huawei' },
+        ],
     },
     {
-        name: 'SQL',
-        icon: sql,
-        experience: 2 + ' years',
-        bgColor: '#0D2136',
+        title: 'Architecture & quality',
+        primary: true,
+        skills: [
+            { name: 'Clean Architecture' },
+            { name: 'MVVM' },
+            { name: 'CI/CD' },
+            { name: 'Unit & integration tests' },
+            { name: 'REST APIs' },
+        ],
     },
     {
-        name: 'Git & GitHub',
-        icon: git,
-        experience: date.getFullYear() - 2020 + ' years',
-        bgColor: '#b3ac7f',
+        title: 'Web',
+        skills: [
+            { name: 'TypeScript', icon: typeScript },
+            { name: 'Next.js', icon: nextjs },
+            { name: 'React', icon: react },
+            { name: 'Redux TK', icon: redux },
+            { name: 'TailwindCSS', icon: tailwind },
+            { name: 'JavaScript', icon: js },
+            { name: 'HTML', icon: html },
+            { name: 'CSS', icon: css },
+        ],
     },
     {
-        name: 'VS Code',
-        icon: vsCode,
-        experience: date.getFullYear() - 2019 + ' years',
-        bgColor: '#333338',
+        title: 'Back-end',
+        skills: [
+            { name: 'Python · FastAPI', icon: python },
+            { name: 'Node.js', icon: node },
+            { name: 'PHP · Laravel' },
+            { name: 'C#', icon: cSharp },
+            { name: 'SQL', icon: sql },
+            { name: 'MongoDB' },
+        ],
     },
     {
-        name: 'VS',
-        icon: vs,
-        experience: 3 + ' years',
-        bgColor: '#292828',
-    },
-    {
-        name: 'C#',
-        icon: cSharp,
-        experience: 2 + ' years',
-        bgColor: '#292828',
-    },
-    {
-        name: 'Adobe Illustrator',
-        icon: ai,
-        experience: date.getFullYear() - 2019 + ' years',
-        bgColor: '#FF8C00',
-    },
-    {
-        name: 'Adobe Premiere',
-        icon: pr,
-        experience: 4 + ' years',
-        bgColor: '#605CA8',
+        title: 'Tools & design',
+        skills: [
+            { name: 'Git & GitHub', icon: git },
+            { name: 'VS Code', icon: vsCode },
+            { name: 'Figma', icon: figma },
+            { name: 'Illustrator', icon: ai },
+            { name: 'Premiere', icon: pr },
+            { name: 'AI-assisted workflows' },
+        ],
     },
 ];
+

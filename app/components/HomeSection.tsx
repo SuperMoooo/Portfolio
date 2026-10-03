@@ -1,34 +1,22 @@
-import React from 'react';
 import CV_Button from './CV_Button';
+import { SOCIALS } from './Navbar';
 
 export default function HomeSection() {
     return (
-        <section className="flex items-center justify-center flex-col">
-            <div className="mb-10 text-center">
-                <p className="md:text-3xl text-2xl font-thin name">
-                    André Montoito
-                </p>
-                <h1 className="lg:text-6xl md:text-5xl text-5xl text-gradient title">
-                    Mobile / Front-end Developer
-                </h1>
-            </div>
-            <div className="flex items-center justify-center gap-4 flex-wrap btns">
-                <CV_Button cv="CV_AndreMontoito.pdf" lang="pt" />
-                <CV_Button cv="CV_AndreMontoito_ENG.pdf" lang="en" />
-            </div>
-
-            <div className="flex items-center justify-center gap-4 absolute bottom-14">
-                <div className="w-10 h-16 border border-accent rounded-full after:w-[0.5px] after:h-3 after:bg-accent after:absolute after:rounded-full flex items-start justify-center after:top-3"></div>
-                <picture>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
-                        fill="#D9D8FF"
-                        className="w-6 h-6 animate-bounce"
-                    >
-                        <path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" />
-                    </svg>
-                </picture>
+        <section id="top" className="mx-auto flex min-h-[calc(100svh-3.5rem)] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6">
+            <p className="fade-up text-nonPrimaryText">André Montoito</p>
+            <h1 className="fade-up mt-3 max-w-3xl text-4xl font-medium leading-tight tracking-tight [animation-delay:100ms] sm:text-6xl">
+                Mobile Engineer building apps with Flutter.
+            </h1>
+            <p className="fade-up mt-6 max-w-xl text-nonPrimaryText [animation-delay:200ms] sm:text-lg">
+                Currently at Tempus Tecnologia and IMR, shipping Android, iOS and Huawei apps. Based in Portugal.
+            </p>
+            <div className="fade-up mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm [animation-delay:300ms]">
+                <CV_Button file="CV_AndreMontoito_ENG.pdf" lang="en" />
+                <CV_Button file="CV_AndreMontoito.pdf" lang="pt" />
+                <a href={`mailto:${SOCIALS.email}`} className="text-nonPrimaryText underline-offset-4 transition-colors hover:text-white hover:underline">
+                    {SOCIALS.email}
+                </a>
             </div>
         </section>
     );
