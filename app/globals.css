@@ -23,7 +23,19 @@ body {
     background: var(--background);
 }
 
+/* The grid pattern lives on a fixed layer the size of the viewport, so it is
+   painted once instead of across the whole page on every scroll. */
 .bgCool {
+    position: relative;
+    isolation: isolate;
+}
+
+.bgCool::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
     background-color: #151515;
     background-image: linear-gradient(#171717 0.6px, transparent 0.6px),
         linear-gradient(to right, #171717 0.6px, #151515 0.6px);

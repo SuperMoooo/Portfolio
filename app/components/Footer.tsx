@@ -16,7 +16,7 @@ export default function Footer() {
                 })
             );
         tick();
-        const interval = setInterval(tick, 1000);
+        const interval = setInterval(tick, 15000);
         return () => clearInterval(interval);
     }, []);
 

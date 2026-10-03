@@ -7,7 +7,7 @@ export default function MobileNav() {
             aria-label="Sections"
             className="fixed inset-x-0 bottom-0 z-40 px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] md:hidden"
         >
-            <div className="mx-auto grid max-w-md grid-cols-4 rounded-2xl border border-white/10 bg-[#1b1b1f]/85 p-1 shadow-2xl shadow-black/50 backdrop-blur-md">
+            <div className="mx-auto grid max-w-md grid-cols-4 rounded-2xl border border-white/10 bg-[#1b1b1f] p-1 shadow-lg shadow-black/40">
                 {NAV_LINKS.map(({ href, label, Icon }) => (
                     <a
                         key={href}
