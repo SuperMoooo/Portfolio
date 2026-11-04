@@ -42,8 +42,9 @@ export const STACK: SkillGroup[] = [
             { name: 'Firebase' },
             { name: 'FVM' },
             { name: 'React Native', icon: react },
-            { name: '.NET MAUI' },
             { name: 'Android · iOS · Huawei' },
+            { name: 'Kotlin' },
+            { name: 'Jetpack Compose' },
         ],
     },
     {
@@ -52,6 +53,7 @@ export const STACK: SkillGroup[] = [
         skills: [
             { name: 'Clean Architecture' },
             { name: 'MVVM' },
+            { name: 'MVI' },
             { name: 'CI/CD' },
             { name: 'Unit & integration tests' },
             { name: 'REST APIs' },
@@ -75,9 +77,8 @@ export const STACK: SkillGroup[] = [
         skills: [
             { name: 'Python · FastAPI', icon: python },
             { name: 'Node.js', icon: node },
-            { name: 'PHP · Laravel' },
-            { name: 'C#', icon: cSharp },
             { name: 'SQL', icon: sql },
+            { name: 'PostgreSQL' },
             { name: 'MongoDB' },
         ],
     },
