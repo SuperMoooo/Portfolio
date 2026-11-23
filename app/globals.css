@@ -2,59 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --background: #151515;
-    --foreground: #ffffff;
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+        color-scheme: dark;
+    }
+
+    body {
+        @apply bg-base text-fg;
+    }
+
+    ::selection {
+        @apply bg-lilac text-base;
+    }
+
+    /* One visible focus style for every link and button. */
+    :focus-visible {
+        outline: 2px solid theme('colors.lilac.DEFAULT');
+        outline-offset: 3px;
+        border-radius: 6px;
+    }
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@layer components {
+    /* Headings use Archivo slightly widened (its variable wdth axis, loaded in
+       layout.tsx), which gives them a firmer, more technical shape than body text. */
+    .type-heading {
+        font-stretch: 110%;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
 }
 
-html {
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
+/* The hero fades in once on load. */
+.hero-enter {
+    animation: heroEnter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-body {
-    color: var(--foreground);
-    background: var(--background);
+/* Requests travelling down the hero diagram: a dot moves along each connector,
+   from the app to the API to the database. */
+.flow-dot {
+    animation: flowDown 2.4s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 
-/* The grid pattern lives on a fixed layer the size of the viewport, so it is
-   painted once instead of across the whole page on every scroll. */
-.bgCool {
-    position: relative;
-    isolation: isolate;
-}
-
-.bgCool::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-color: #151515;
-    background-image: linear-gradient(#171717 0.6px, transparent 0.6px),
-        linear-gradient(to right, #171717 0.6px, #151515 0.6px);
-    background-size: 12px 12px;
-}
-
-.fade-up {
-    opacity: 0;
-    animation: fadeUpAnimation 0.8s ease forwards;
-}
-
-@keyframes fadeUpAnimation {
+@keyframes heroEnter {
     from {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(12px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: none;
+    }
+}
+
+@keyframes flowDown {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    15%,
+    85% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
     }
 }
 
@@ -62,8 +76,11 @@ body {
     html {
         scroll-behavior: auto;
     }
-    .fade-up {
-        opacity: 1;
+    .hero-enter {
         animation: none;
+    }
+    .flow-dot {
+        animation: none;
+        top: 50%;
     }
 }

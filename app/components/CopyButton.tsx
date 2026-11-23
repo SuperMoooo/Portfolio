@@ -1,26 +1,34 @@
 'use client';
 import { useState } from 'react';
 
-export default function CopyButton({ text }: { text: string }) {
-    const [copied, setCopied] = useState(false);
+// How long "Copied" stays before the button goes back to "Copy".
+const CONFIRMATION_MS = 1500;
 
-    const copy = async () => {
+/** Copies a terminal command to the clipboard and confirms it in place. */
+export default function CopyButton({ text }: { text: string }) {
+    const [hasCopied, setHasCopied] = useState(false);
+
+    const copyText = async () => {
         try {
             await navigator.clipboard.writeText(text);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 1500);
+            setHasCopied(true);
+            setTimeout(() => setHasCopied(false), CONFIRMATION_MS);
         } catch {
-            // Clipboard can be blocked (e.g. insecure context); nothing to do.
+            // Clipboard access is blocked outside secure contexts; the command
+            // is still on screen to select by hand.
         }
     };
 
     return (
         <button
             type="button"
-            onClick={copy}
-            className="min-h-[36px] shrink-0 rounded-lg border border-white/15 px-3 text-xs text-nonPrimaryText transition-colors hover:text-white active:scale-95"
+            onClick={copyText}
+            aria-label={hasCopied ? 'Copied' : `Copy “${text}”`}
+            className={`min-h-[44px] min-w-[4.25rem] shrink-0 rounded-md border px-2.5 font-sans text-xs font-semibold transition-colors ${
+                hasCopied ? 'border-lilac/50 text-lilac' : 'border-edge text-muted hover:border-lilac/50 hover:text-fg'
+            }`}
         >
-            {copied ? 'Copied ✓' : 'Copy'}
+            <span aria-live="polite">{hasCopied ? 'Copied' : 'Copy'}</span>
         </button>
     );
 }

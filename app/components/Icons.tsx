@@ -18,7 +18,7 @@ export function LinkedinIcon({ className = 'w-5 h-5' }: IconProps) {
 
 export function MailIcon({ className = 'w-5 h-5' }: IconProps) {
     return (
-        <svg fill="none" strokeWidth={1.5} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
+        <svg fill="none" strokeWidth={1.6} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
         </svg>
     );
@@ -32,9 +32,9 @@ export function ArrowUpRightIcon({ className = 'w-4 h-4' }: IconProps) {
     );
 }
 
-export function DownloadIcon({ className = 'w-5 h-5' }: IconProps) {
+export function DownloadIcon({ className = 'w-4 h-4' }: IconProps) {
     return (
-        <svg fill="none" strokeWidth={1.8} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
+        <svg fill="none" strokeWidth={2} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
         </svg>
     );
@@ -48,34 +48,10 @@ export function PlayStoreIcon({ className = 'w-4 h-4' }: IconProps) {
     );
 }
 
-export function PhoneIcon({ className = 'w-5 h-5' }: IconProps) {
+export function PackageIcon({ className = 'w-4 h-4' }: IconProps) {
     return (
-        <svg fill="none" strokeWidth={1.6} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-        </svg>
-    );
-}
-
-export function TerminalIcon({ className = 'w-5 h-5' }: IconProps) {
-    return (
-        <svg fill="none" strokeWidth={1.6} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-        </svg>
-    );
-}
-
-export function BriefcaseIcon({ className = 'w-5 h-5' }: IconProps) {
-    return (
-        <svg fill="none" strokeWidth={1.6} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-        </svg>
-    );
-}
-
-export function StackIcon({ className = 'w-5 h-5' }: IconProps) {
-    return (
-        <svg fill="none" strokeWidth={1.6} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+        <svg fill="none" strokeWidth={1.8} stroke="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
         </svg>
     );
 }

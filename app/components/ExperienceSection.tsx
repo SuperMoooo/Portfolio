@@ -1,47 +1,77 @@
-import { EARLIER_EXPERIENCE_FROM, EDUCATION, EXPERIENCE } from '../constants/Experience';
+import { EARLY_INTERNSHIPS, EDUCATION, EXPERIENCE } from '../constants/Experience';
+import { SPOKEN_LANGUAGES } from '../constants/Skills';
 import { ChevronDownIcon } from './Icons';
-import JobContent from './JobContent';
+import JobCard from './JobCard';
 import SectionHeading from './SectionHeading';
+import { cardClass } from './styles';
 
-const timelineClass =
-    'relative flex flex-col gap-6 before:absolute before:bottom-0 before:left-[17px] before:top-2 before:w-px before:bg-gradient-to-b before:from-accent/50 before:to-transparent sm:before:left-[21px]';
-
+/** Work history as a card grid, then education, languages and early internships in one row. */
 export default function ExperienceSection() {
-    const recent = EXPERIENCE.slice(0, EARLIER_EXPERIENCE_FROM);
-    const earlier = EXPERIENCE.slice(EARLIER_EXPERIENCE_FROM);
-
     return (
-        <section id="experience" className="scroll-mt-20">
-            <SectionHeading eyebrow="04 · Experience" title="Where I've worked" />
+        <section className="mx-auto max-w-page px-4 py-12 sm:px-6 md:py-16">
+            <SectionHeading
+                id="experience"
+                title="Experience"
+                intro="Client apps, mostly in Flutter, built part-time alongside my degree."
+            />
 
-            <ol className={timelineClass}>
-                {recent.map((job) => (
-                    <JobContent key={job.company} job={job} />
+            <ol className="grid gap-4 md:grid-cols-2">
+                {EXPERIENCE.map((job) => (
+                    <JobCard key={job.company} job={job} />
                 ))}
             </ol>
 
-            <details className="group mt-6">
-                <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-center gap-2 rounded-default border border-white/10 bg-white/[0.03] px-4 text-sm text-nonPrimaryText transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
-                    Earlier experience & internships ({earlier.length})
-                    <ChevronDownIcon className="h-4 w-4 transition-transform group-open:rotate-180" />
-                </summary>
-                <ol className={`${timelineClass} mt-6`}>
-                    {earlier.map((job) => (
-                        <JobContent key={job.company} job={job} />
-                    ))}
-                </ol>
-            </details>
+            <div className="mt-4 grid gap-4 lg:grid-cols-3">
+                <div className={`${cardClass} p-5 lg:col-span-2`}>
+                    <h3 className="font-semibold">Education</h3>
+                    <ol className="mt-3 flex flex-col gap-3">
+                        {EDUCATION.map((item) => (
+                            <li key={item.degree} className="flex flex-col gap-x-4 sm:flex-row sm:justify-between">
+                                <div>
+                                    <p className="text-[15px]">{item.degree}</p>
+                                    <p className="text-sm text-muted">{item.school}</p>
+                                </div>
+                                <p className="shrink-0 text-sm tabular-nums text-muted">{item.period}</p>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
 
-            <h3 className="mb-4 mt-12 text-xl font-semibold">Education</h3>
-            <ul className="grid gap-3 md:grid-cols-3">
-                {EDUCATION.map((item) => (
-                    <li key={item.degree} className="rounded-[1.25rem] border border-white/10 bg-secondBg p-4">
-                        <p className="font-mono text-xs text-nonPrimaryText">{item.period}</p>
-                        <p className="mt-1 font-medium">{item.degree}</p>
-                        <p className="mt-1 text-sm text-nonPrimaryText">{item.school}</p>
-                    </li>
-                ))}
-            </ul>
+                <div className="flex flex-col gap-4">
+                    <div className={`${cardClass} p-5`}>
+                        <h3 className="font-semibold">Languages</h3>
+                        <ul className="mt-3 flex flex-col gap-1 text-[15px]">
+                            {SPOKEN_LANGUAGES.map((language) => (
+                                <li key={language.name} className="flex justify-between gap-4">
+                                    {language.name}
+                                    <span className="text-sm text-muted">{language.level}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <details className={`${cardClass} group px-5`}>
+                        <summary className="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-2 font-semibold [&::-webkit-details-marker]:hidden">
+                            School internships ({EARLY_INTERNSHIPS.length})
+                            <ChevronDownIcon className="h-4 w-4 text-muted transition-transform group-open:rotate-180" />
+                        </summary>
+                        <ul className="flex flex-col gap-3 pb-5">
+                            {EARLY_INTERNSHIPS.map((job) =>
+                                job.roles.map((role) => (
+                                    <li key={job.company}>
+                                        <p className="text-[15px]">
+                                            {job.company}
+                                            <span className="text-muted">, {role.title.toLowerCase()}</span>
+                                        </p>
+                                        <p className="text-sm text-muted">{role.bullets.join(' ')}</p>
+                                        <p className="text-xs tabular-nums text-muted">{role.period}</p>
+                                    </li>
+                                ))
+                            )}
+                        </ul>
+                    </details>
+                </div>
+            </div>
         </section>
     );
 }

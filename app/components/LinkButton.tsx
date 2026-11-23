@@ -1,28 +1,30 @@
+import type { ReactNode } from 'react';
 import type { ProjectLink } from '../constants/Projects';
-import { ArrowUpRightIcon, DownloadIcon, GithubIcon, PlayStoreIcon } from './Icons';
+import { ArrowUpRightIcon, DownloadIcon, GithubIcon, PackageIcon, PlayStoreIcon } from './Icons';
+import { buttonClass, type Emphasis } from './styles';
 
-export default function LinkButton({ link, primary = false }: { link: ProjectLink; primary?: boolean }) {
-    const icon = {
-        play: <PlayStoreIcon />,
-        apk: <DownloadIcon className="h-4 w-4" />,
-        github: <GithubIcon className="h-4 w-4" />,
-        demo: <ArrowUpRightIcon />,
-        pub: <ArrowUpRightIcon />,
-    }[link.kind];
+const ICONS: Record<ProjectLink['kind'], ReactNode> = {
+    play: <PlayStoreIcon />,
+    apk: <DownloadIcon />,
+    github: <GithubIcon className="h-4 w-4" />,
+    demo: <ArrowUpRightIcon />,
+    pub: <PackageIcon />,
+    pypi: <PackageIcon />,
+};
+
+/** A project's external link (store page, package registry, source code). */
+export default function LinkButton({ link, emphasis = 'secondary' }: { link: ProjectLink; emphasis?: Emphasis }) {
+    const isDownload = link.kind === 'apk';
 
     return (
         <a
             href={link.href}
-            target={link.kind === 'apk' ? undefined : '_blank'}
+            target={isDownload ? undefined : '_blank'}
             rel="noopener noreferrer"
-            download={link.kind === 'apk' || undefined}
-            className={`inline-flex min-h-[44px] items-center justify-center gap-2 rounded-default px-4 text-sm font-medium transition-transform duration-200 hover:scale-105 active:scale-95 ${
-                primary
-                    ? 'bg-gradient-to-r from-accent to-primary text-black'
-                    : 'border border-white/15 bg-white/5 text-white'
-            }`}
+            download={isDownload || undefined}
+            className={buttonClass(emphasis)}
         >
-            {icon}
+            {ICONS[link.kind]}
             {link.label}
         </a>
     );

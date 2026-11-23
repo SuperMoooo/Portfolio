@@ -1,6 +1,6 @@
 import type { MobileApp } from '../constants/Projects';
 
-// Crops the app logo out of its store banner so it can be shown as an app icon.
+/** Crops the app logo out of its store banner so it can be shown as an app icon. */
 export default function AppIcon({ app, className = 'h-14 w-14' }: { app: MobileApp; className?: string }) {
     return (
         <span

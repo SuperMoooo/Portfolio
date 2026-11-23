@@ -1,27 +1,25 @@
+import ContactFooter from './components/ContactFooter';
 import ExperienceSection from './components/ExperienceSection';
-import Footer from './components/Footer';
-import HomeSection from './components/HomeSection';
-import MobileNav from './components/MobileNav';
-import MoarchSection from './components/MoarchSection';
-import Navbar from './components/Navbar';
-import OtherProjectsSection from './components/OtherProjectsSection';
+import HeroSection from './components/HeroSection';
+import OpenSourceSection from './components/OpenSourceSection';
 import ProjectsSection from './components/ProjectsSection';
-import SkillsSection from './components/SkillsSection';
+import SiteHeader from './components/SiteHeader';
+import StackSection from './components/StackSection';
 
+// Order follows what a recruiter checks first: who, where they worked, what
+// they built (both ends of the stack), then the full skill list.
 export default function Home() {
     return (
-        <div className="bgCool min-h-[100dvh] overflow-x-clip text-pretty">
-            <Navbar />
-            <HomeSection />
-            <main className="mx-auto flex max-w-6xl flex-col gap-20 px-4 pb-32 sm:px-6 md:gap-28 md:pb-12">
-                <ProjectsSection />
-                <MoarchSection />
-                <OtherProjectsSection />
+        <div id="top" className="min-h-[100dvh] overflow-x-clip text-pretty">
+            <SiteHeader />
+            <main>
+                <HeroSection />
                 <ExperienceSection />
-                <SkillsSection />
-                <Footer />
+                <OpenSourceSection />
+                <ProjectsSection />
+                <StackSection />
             </main>
-            <MobileNav />
+            <ContactFooter />
         </div>
     );
 }

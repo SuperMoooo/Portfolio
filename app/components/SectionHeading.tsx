@@ -1,15 +1,17 @@
 interface SectionHeadingProps {
-    eyebrow: string;
+    id: string;
     title: string;
-    desc?: string;
+    intro?: string;
 }
 
-export default function SectionHeading({ eyebrow, title, desc }: SectionHeadingProps) {
+/** A section's h2 and its one-line summary. The id is the nav anchor. */
+export default function SectionHeading({ id, title, intro }: SectionHeadingProps) {
     return (
-        <div className="mb-8 flex flex-col gap-2 sm:mb-10">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary/80">{eyebrow}</p>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
-            {desc && <p className="max-w-2xl text-nonPrimaryText">{desc}</p>}
+        <div className="mb-8 max-w-2xl">
+            <h2 id={id} className="type-heading scroll-mt-24 text-2xl sm:text-3xl">
+                {title}
+            </h2>
+            {intro && <p className="mt-2 text-base leading-relaxed text-muted">{intro}</p>}
         </div>
     );
 }

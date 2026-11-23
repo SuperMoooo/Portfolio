@@ -1,32 +1,46 @@
 import type { Metadata, Viewport } from 'next';
-import { Rubik } from 'next/font/google';
+import { Archivo, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
-const rubik = Rubik({
+// Archivo is a variable font with a width axis; loading `wdth` lets headings
+// use its expanded cut while body text stays at normal width.
+const archivo = Archivo({
     subsets: ['latin'],
     display: 'swap',
+    axes: ['wdth'],
+    variable: '--font-archivo',
+});
+
+// Only for the terminal commands in the open-source section.
+const plexMono = IBM_Plex_Mono({
+    subsets: ['latin'],
+    weight: ['400', '500'],
+    display: 'swap',
+    variable: '--font-plex-mono',
 });
 
 export const viewport: Viewport = {
-    themeColor: '#151515',
+    themeColor: '#0D0C12',
     width: 'device-width',
     initialScale: 1,
     viewportFit: 'cover',
 };
 
 export const metadata: Metadata = {
-    title: 'André Montoito · Mobile Engineer (Flutter)',
+    title: 'André Montoito, Mobile Engineer & Backend Developer',
     description:
-        'André Montoito, a Flutter Mobile Engineer from Portugal shipping Android, iOS and Huawei apps. Apps, open-source work (moarch), experience and stack.',
+        'André Montoito, mobile engineer and backend developer in Portugal. Flutter and Android apps, Python/FastAPI and PostgreSQL back ends, built end to end from UI to API. Author of the moarch and moarch-py scaffolding CLIs.',
     keywords: [
         'portfolio',
-        'Flutter developer',
         'mobile engineer',
-        'Dart',
+        'backend developer',
+        'Flutter developer',
         'Android',
-        'iOS',
+        'FastAPI',
+        'Python',
+        'PostgreSQL',
         'moarch',
-        'clean architecture',
+        'moarch-py',
         'André Montoito',
     ],
     authors: [
@@ -57,8 +71,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={`${rubik.className} antialiased`}>{children}</body>
+        <html lang="en" className={`${archivo.variable} ${plexMono.variable}`}>
+            <body className="font-sans antialiased">{children}</body>
         </html>
     );
 }

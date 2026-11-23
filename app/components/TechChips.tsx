@@ -1,8 +1,11 @@
-export default function TechChips({ techs }: { techs: string[] }) {
+import { chipClass } from './styles';
+
+/** The technologies behind a job or project, as small scannable tags. */
+export default function TechChips({ techs, className = '' }: { techs: string[]; className?: string }) {
     return (
-        <ul className="flex flex-wrap gap-1.5">
+        <ul className={`flex flex-wrap gap-1.5 ${className}`} aria-label="Technologies">
             {techs.map((tech) => (
-                <li key={tech} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs text-accent">
+                <li key={tech} className={chipClass}>
                     {tech}
                 </li>
             ))}
