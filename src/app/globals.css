@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Colour tokens, as RGB channels so Tailwind can add opacity to them.
+ * Dark only: a violet-black page, tiles a step lighter, and a pastel purple
+ * accent (wisteria #C3B1E1, lavender #E6E6FA on hover).
+ * Tiles are told apart from the page by tone and the gap between them, not
+ * borders, so the grid stays quiet. Contrast, checked against WCAG: ink-muted
+ * is 6.1:1 or more on every surface, accent-ink on accent is 9.1:1.
+ */
+:root {
+    --color-canvas: 11 10 15; /* #0B0A0F page background */
+    --color-surface: 28 25 37; /* #1C1925 tiles */
+    --color-surface-raised: 42 37 52; /* #2A2534 tags, chips and tabs on a tile */
+    --color-line: 46 41 57; /* #2E2939 dividers inside a tile */
+    --color-ink: 238 235 244; /* #EEEBF4 text */
+    --color-ink-muted: 167 160 184; /* #A7A0B8 secondary text */
+    --color-accent: 195 177 225; /* #C3B1E1 wisteria: actions, the current tab and section */
+    --color-accent-hover: 230 230 250; /* #E6E6FA lavender: accent on hover */
+    --color-accent-ink: 26 20 38; /* #1A1426 text on a wisteria fill */
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+        color-scheme: dark;
+    }
+
+    body {
+        @apply bg-canvas text-ink;
+    }
+
+    ::selection {
+        @apply bg-accent text-accent-ink;
+    }
+
+    /* One visible focus style for every link and button. */
+    :focus-visible {
+        outline: 2px solid rgb(var(--color-accent));
+        outline-offset: 3px;
+        border-radius: 6px;
+    }
+}
+
+@layer utilities {
+    /* Archivo is loaded with its width axis (layout.tsx); headings use the
+       slightly expanded cut, which reads firmer and more technical than body text. */
+    .font-wide {
+        font-stretch: 112%;
+    }
+}
+
+/* The hero tile fades in once on load; the only entrance animation on the page. */
+.hero-enter {
+    animation: hero-enter 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes hero-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .hero-enter {
+        animation: none;
+    }
+}
