@@ -15,8 +15,10 @@ function Terminal({ tool }: { tool: ScaffoldTool }) {
     return (
         <div className="min-w-0 overflow-hidden rounded-control bg-canvas font-mono text-code">
             <div className="flex items-center justify-between gap-3 border-b border-line py-1 pl-4 pr-1.5">
-                {/* min-w-0 lets a long install line scroll instead of widening the tile. */}
-                <code className="min-w-0 overflow-x-auto whitespace-nowrap">
+                {/* Wraps on phones, so the package name is never clipped behind the
+                    Copy button; from sm up there is room for one scrolling line.
+                    min-w-0 keeps a long line from widening the tile. */}
+                <code className="min-w-0 whitespace-pre-wrap break-all sm:overflow-x-auto sm:whitespace-nowrap sm:break-normal">
                     <Prompt />
                     {tool.installCommand}
                 </code>

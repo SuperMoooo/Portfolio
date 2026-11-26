@@ -45,8 +45,9 @@ components only lay that data out.
 ## Design
 
 Dark, with a pastel purple accent: wisteria `#C3B1E1`, lavender `#E6E6FA` on
-hover, on a violet-black page. Each section is one compact grid of tiles
-(the `Tile` component). Colours are CSS variables in `src/app/globals.css`,
+hover, on a violet-black page. Tiles (the `Tile` component) are for things
+(a job, an app, a CLI, a side project), not for groups of facts: skills,
+education and languages are plain text under a heading. Colours are CSS variables in `src/app/globals.css`,
 exposed to Tailwind as named tokens (`canvas`, `surface`, `ink`, `accent`, …)
 in `tailwind.config.ts`. Components use the token names only, never a raw hex.
 

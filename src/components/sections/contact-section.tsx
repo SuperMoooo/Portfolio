@@ -14,33 +14,39 @@ export function ContactSection() {
                         <h2 id="contact-title" className="text-balance font-wide text-title">
                             Hiring for mobile or backend work?
                         </h2>
-                        <p className="mt-3 max-w-md text-lead text-accent-ink/75">
+                        <p className="mt-3 max-w-xl text-lead text-accent-ink/75">
                             Email me, or start with the CV. I work in English and Portuguese.
                         </p>
                     </div>
+                    {/* Three groups that wrap as units: the email (full width on phones),
+                        the CVs, then the profiles, so no button is left alone on a line. */}
                     <div className="flex flex-wrap gap-2">
-                        <ButtonLink href={`mailto:${SOCIALS.email}`} variant="primary-on-accent">
+                        <ButtonLink href={`mailto:${SOCIALS.email}`} variant="primary-on-accent" className="w-full sm:w-auto">
                             <MailIcon className="h-4 w-4" />
                             {SOCIALS.email}
                         </ButtonLink>
-                        <ButtonLink href={CV_FILES.english.href} download={CV_FILES.english.downloadName} variant="secondary-on-accent">
-                            <DownloadIcon />
-                            CV
-                        </ButtonLink>
-                        <ButtonLink
-                            href={CV_FILES.portuguese.href}
-                            download={CV_FILES.portuguese.downloadName}
-                            lang="pt"
-                            variant="secondary-on-accent"
-                        >
-                            CV em português
-                        </ButtonLink>
-                        <ButtonLink href={SOCIALS.github} shape="icon" isExternal aria-label="GitHub" variant="secondary-on-accent">
-                            <GithubIcon />
-                        </ButtonLink>
-                        <ButtonLink href={SOCIALS.linkedin} shape="icon" isExternal aria-label="LinkedIn" variant="secondary-on-accent">
-                            <LinkedinIcon />
-                        </ButtonLink>
+                        <div className="flex gap-2">
+                            <ButtonLink href={CV_FILES.english.href} download={CV_FILES.english.downloadName} variant="secondary-on-accent">
+                                <DownloadIcon />
+                                CV
+                            </ButtonLink>
+                            <ButtonLink
+                                href={CV_FILES.portuguese.href}
+                                download={CV_FILES.portuguese.downloadName}
+                                lang="pt"
+                                variant="secondary-on-accent"
+                            >
+                                CV em português
+                            </ButtonLink>
+                        </div>
+                        <div className="flex gap-2">
+                            <ButtonLink href={SOCIALS.github} shape="icon" isExternal aria-label="GitHub" variant="secondary-on-accent">
+                                <GithubIcon />
+                            </ButtonLink>
+                            <ButtonLink href={SOCIALS.linkedin} shape="icon" isExternal aria-label="LinkedIn" variant="secondary-on-accent">
+                                <LinkedinIcon />
+                            </ButtonLink>
+                        </div>
                     </div>
                 </div>
             </div>

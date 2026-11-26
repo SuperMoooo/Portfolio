@@ -32,7 +32,7 @@ function useCurrentSectionId(sectionIds: string[]) {
     return currentSectionId;
 }
 
-/** The header's section links, with the section being read underlined in the accent. */
+/** The header's section links, with the section being read in bold and underlined in the accent. */
 export function SectionNav() {
     const currentSectionId = useCurrentSectionId(WATCHED_SECTION_IDS);
 
@@ -48,10 +48,19 @@ export function SectionNav() {
                                 aria-current={isCurrent ? 'true' : undefined}
                                 className={cn(
                                     'relative flex h-16 items-center px-3 text-sm transition-colors',
-                                    isCurrent ? 'text-accent' : 'text-ink-muted hover:text-ink'
+                                    // Wisteria text barely differs from the muted links in brightness, so the
+                                    // current link is set apart by weight and full ink, with the accent underline.
+                                    isCurrent ? 'font-semibold text-ink' : 'text-ink-muted hover:text-ink'
                                 )}
                             >
-                                {label}
+                                {/* An invisible bold copy holds each link at its bold width, so
+                                    the links do not shift sideways when the current one changes. */}
+                                <span className="grid">
+                                    <span className="col-start-1 row-start-1">{label}</span>
+                                    <span aria-hidden="true" className="invisible col-start-1 row-start-1 font-semibold">
+                                        {label}
+                                    </span>
+                                </span>
                                 {/* Sits on the header's bottom border, like a tab indicator. */}
                                 {isCurrent && <span aria-hidden="true" className="absolute inset-x-3 -bottom-px h-0.5 bg-accent" />}
                             </a>

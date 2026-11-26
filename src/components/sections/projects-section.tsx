@@ -9,8 +9,8 @@ import { TagList } from '@/components/ui/tag-list';
 import { Tile } from '@/components/ui/tile';
 import { cn } from '@/lib/class-names';
 
-// Two full rows of three on desktop before the "Show more" toggle.
-const VISIBLE_SIDE_PROJECT_COUNT = 6;
+// One full row of three on desktop, the strongest work, before the "Show more" toggle.
+const VISIBLE_SIDE_PROJECT_COUNT = 3;
 
 const TEXT_LINK_CLASS =
     'inline-flex min-h-[44px] items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover';

@@ -8,7 +8,12 @@ import {
 import { Tile } from '@/components/ui/tile';
 import { CV_FILES, SOCIALS } from '@/content/profile';
 
-/** The opening tile, full width: who I am and what I do, then the CV and contact links. */
+// Links inside the lead: full ink and underlined, so the named work stands out
+// from the muted sentence around it.
+const LEAD_LINK_CLASS =
+    'text-ink underline decoration-accent/60 underline-offset-4 transition-colors hover:text-accent';
+
+/** The opening tile, full width: what I do, the work that proves it, then the CV and contact links. */
 export function HeroSection() {
     return (
         <section
@@ -17,10 +22,10 @@ export function HeroSection() {
             className="scroll-mt-16"
         >
             <div className="mx-auto max-w-page px-4 pt-6 sm:px-6 lg:px-8 lg:pt-8">
-                <Tile className="hero-enter flex flex-col gap-10 p-6 sm:p-10 lg:gap-16 lg:p-14">
+                <Tile className="hero-enter flex flex-col gap-10 p-6 sm:p-10 lg:p-14">
                     <div>
                         <p className="text-sm text-ink-muted">
-                            André Montoito, Portugal
+                            Based in Portugal
                         </p>
                         <h1
                             id="hero-title"
@@ -33,8 +38,13 @@ export function HeroSection() {
                     {/* Text left, actions right on wide screens, so the full-width
                         tile ends in one row instead of a tall stack. */}
                     <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+                        {/* The proof, not a restatement of the title: the shipped apps
+                            and the published CLIs, each linking to its section. */}
                         <p className="max-w-xl text-lead text-ink-muted">
-                            I build apps end to end, from the UI to the API
+                            Two Flutter apps on Google Play,{' '}
+                            <a href="#projects" className={LEAD_LINK_CLASS}>Gesti and Compras</a>, and{' '}
+                            <a href="#open-source" className={LEAD_LINK_CLASS}>moarch and moarch-py</a>, the
+                            CLIs I publish to set up both ends of an app.
                         </p>
 
                         {/* Two groups, so on phones the CVs and the contact icons each

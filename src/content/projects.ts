@@ -65,7 +65,11 @@ export interface SideProject {
     sourceLink?: string;
 }
 
-/** Everything else, most relevant first: a hackathon API, an app, websites and games. */
+/**
+ * Everything else, strongest first: the first three show before "Show more"
+ * (the hackathon API, the client site, then the full-stack game site); the
+ * public-API exercises come last.
+ */
 export const SIDE_PROJECTS: SideProject[] = [
     {
         title: 'Urban Infrastructure',
@@ -75,11 +79,11 @@ export const SIDE_PROJECTS: SideProject[] = [
         technologies: ['Python', 'API', 'Machine learning'],
     },
     {
-        title: 'MoT',
+        title: 'Kubic Deal',
         description:
-            'React Native app to track birthdays (with a notification on the day), notes and tasks.',
-        sourceLink: 'https://github.com/SuperMoooo/MoT',
-        technologies: ['React Native', 'Redux Toolkit'],
+            'Website for a client, built for the launch of the company.',
+        demoLink: 'https://kubicdeal.pt/',
+        technologies: ['HTML', 'CSS', 'JavaScript'],
     },
     {
         title: 'PokeGames',
@@ -89,13 +93,25 @@ export const SIDE_PROJECTS: SideProject[] = [
         sourceLink: 'https://github.com/SuperMoooo/PokeGames',
         technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'MongoDB'],
     },
-
     {
-        title: 'Kubic Deal',
+        title: 'MoT',
         description:
-            'Website for a client, built for the launch of the company.',
-        demoLink: 'https://kubicdeal.pt/',
-        technologies: ['HTML', 'CSS', 'JavaScript'],
+            'React Native app to track birthdays (with a notification on the day), notes and tasks.',
+        sourceLink: 'https://github.com/SuperMoooo/MoT',
+        technologies: ['React Native', 'Redux Toolkit'],
+    },
+    {
+        title: 'Slime Game',
+        description:
+            'PC and Android game made for my final school project. Final grade: 18/20.',
+        demoLink: 'https://supermo.itch.io/slime-game',
+        technologies: ['GDevelop'],
+    },
+    {
+        title: 'Bipo',
+        description: 'Game built for the game development course unit.',
+        demoLink: 'https://supermoooo.itch.io/bipo',
+        technologies: ['Unreal Engine 5'],
     },
     {
         title: 'Comic Characters Info',
@@ -111,19 +127,6 @@ export const SIDE_PROJECTS: SideProject[] = [
         demoLink: 'https://supermoooo.github.io/NBA-SITE/',
         sourceLink: 'https://github.com/SuperMoooo/NBA-SITE',
         technologies: ['React', 'Tailwind CSS'],
-    },
-    {
-        title: 'Slime Game',
-        description:
-            'PC and Android game made for my final school project. Final grade: 18/20.',
-        demoLink: 'https://supermo.itch.io/slime-game',
-        technologies: ['GDevelop'],
-    },
-    {
-        title: 'Bipo',
-        description: 'Game built for the game development course unit.',
-        demoLink: 'https://supermoooo.itch.io/bipo',
-        technologies: ['Unreal Engine 5'],
     },
     {
         title: 'BlackJack',

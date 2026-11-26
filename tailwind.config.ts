@@ -37,7 +37,7 @@ export default {
                 display: ['clamp(2.5rem, 1.4rem + 4.4vw, 5rem)', { lineHeight: '1', letterSpacing: '-0.035em', fontWeight: '700' }],
                 title: ['clamp(1.75rem, 1.45rem + 1.1vw, 2.25rem)', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
                 heading: ['1.25rem', { lineHeight: '1.3', letterSpacing: '-0.01em', fontWeight: '600' }],
-                lead: ['1.125rem', { lineHeight: '1.65' }],
+                lead: ['1.125rem', { lineHeight: '1.5' }],
                 // Terminal lines: mono runs wide, so it sits a step under body text.
                 code: ['0.8125rem', { lineHeight: '1.7' }],
             },

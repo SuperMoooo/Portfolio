@@ -1,6 +1,8 @@
 import type { StaticImageData } from 'next/image';
 // Logos are the "original" set from devicon (https://devicon.dev, MIT), the
 // same icons GitHub profile READMEs use.
+// mysql.svg is recoloured from devicon's #00618A to #5BA4CF: the original
+// dark blue was about 2:1 on the page and all but vanished.
 import androidLogo from '@/assets/tech-logos/android.svg';
 import appleLogo from '@/assets/tech-logos/apple.svg';
 import cssLogo from '@/assets/tech-logos/css3.svg';

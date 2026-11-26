@@ -3,9 +3,9 @@ import { Section } from '@/components/ui/section';
 import { Tile } from '@/components/ui/tile';
 import { ExperienceTabs } from './experience-tabs';
 
-function EducationTile() {
+function EducationList() {
     return (
-        <Tile className="p-5 sm:p-6">
+        <div>
             <h3 className="font-semibold">Education</h3>
             <ol className="mt-4 flex flex-col gap-4">
                 {EDUCATION.map((item) => (
@@ -17,15 +17,15 @@ function EducationTile() {
                     </li>
                 ))}
             </ol>
-        </Tile>
+        </div>
     );
 }
 
-function LanguagesTile() {
+function LanguagesList() {
     return (
-        <Tile className="p-5 sm:p-6">
+        <div>
             <h3 className="font-semibold">Languages</h3>
-            <dl className="mt-4 flex flex-col gap-2 text-sm">
+            <dl className="mt-4 flex max-w-xs flex-col gap-2 text-sm">
                 {SPOKEN_LANGUAGES.map((language) => (
                     <div key={language.name} className="flex justify-between gap-4">
                         <dt>{language.name}</dt>
@@ -33,22 +33,23 @@ function LanguagesTile() {
                     </div>
                 ))}
             </dl>
-        </Tile>
+        </div>
     );
 }
 
-/** Jobs as tabs in a wide tile, with education and languages stacked beside it. */
+/**
+ * Jobs as tabs in a full-width tile, then education and languages below as
+ * plain columns: they are a few lines of facts, not things to frame in a tile.
+ */
 export function ExperienceSection() {
     return (
         <Section id="experience" title="Experience" intro="Client apps, mostly in Flutter, built part-time alongside my degree.">
-            <div className="grid gap-4 lg:grid-cols-12">
-                <Tile className="lg:col-span-8">
-                    <ExperienceTabs />
-                </Tile>
-                <div className="flex flex-col gap-4 lg:col-span-4">
-                    <EducationTile />
-                    <LanguagesTile />
-                </div>
+            <Tile>
+                <ExperienceTabs />
+            </Tile>
+            <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-12">
+                <EducationList />
+                <LanguagesList />
             </div>
         </Section>
     );

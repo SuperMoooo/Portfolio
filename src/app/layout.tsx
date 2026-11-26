@@ -21,7 +21,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const viewport: Viewport = {
     // The canvas token (globals.css), so the browser chrome on phones matches the page.
-    themeColor: '#121013',
+    themeColor: '#0B0A0F',
     width: 'device-width',
     initialScale: 1,
     viewportFit: 'cover',

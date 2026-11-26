@@ -14,10 +14,11 @@ const BASE =
 
 const VARIANTS: Record<ButtonVariant, string> = {
     primary: 'bg-accent text-accent-ink hover:bg-accent-hover',
-    // A translucent ink border reads on the page and on tiles alike.
-    secondary: 'border border-ink/15 text-ink hover:border-accent/70 hover:text-accent',
+    // A translucent ink border reads on the page and on tiles alike; 40% keeps it
+    // at the 3:1 WCAG asks of a control's outline.
+    secondary: 'border border-ink/40 text-ink hover:border-accent/70 hover:text-accent',
     'primary-on-accent': 'bg-accent-ink text-accent hover:bg-accent-ink/85',
-    'secondary-on-accent': 'border border-accent-ink/25 text-accent-ink hover:border-accent-ink/70',
+    'secondary-on-accent': 'border border-accent-ink/60 text-accent-ink hover:border-accent-ink/70',
 };
 
 const SHAPES: Record<ButtonShape, string> = {

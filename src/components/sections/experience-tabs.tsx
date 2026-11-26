@@ -138,8 +138,9 @@ export function ExperienceTabs({ className }: { className?: string }) {
                 role="tablist"
                 aria-label="Employers"
                 onKeyDown={moveBetweenTabs}
-                // A scrolling row on phones, a column beside the panel from md up.
-                className="-mx-1 flex gap-1 overflow-x-auto px-1 pb-1 md:mx-0 md:flex-col md:overflow-visible md:px-0 md:pb-0"
+                // A two-column grid on phones, so every employer is visible at once
+                // (a sideways-scrolling row hid most of them); a column beside the panel from md up.
+                className="grid grid-cols-2 gap-1 md:flex md:flex-col"
             >
                 {TABS.map((tab, index) => {
                     const isSelected = index === selectedIndex;
@@ -162,7 +163,7 @@ export function ExperienceTabs({ className }: { className?: string }) {
                                 isSelected ? 'bg-surface-raised text-ink' : 'text-ink-muted hover:bg-surface-raised/50 hover:text-ink'
                             )}
                         >
-                            <span className="whitespace-nowrap text-sm font-semibold">{tab.label}</span>
+                            <span className="text-sm font-semibold md:whitespace-nowrap">{tab.label}</span>
                             {/* The space keeps screen readers from running the name and
                                 years together; flex layout ignores it visually. */}{' '}
                             <span className={cn('text-xs tabular-nums', isSelected ? 'text-accent' : 'text-ink-muted')}>

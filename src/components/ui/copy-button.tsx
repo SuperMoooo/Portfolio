@@ -27,7 +27,7 @@ export function CopyButton({ text }: { text: string }) {
             aria-label={hasCopied ? 'Copied' : `Copy “${text}”`}
             className={cn(
                 'min-h-[44px] min-w-[4.25rem] shrink-0 rounded-tag border px-2.5 font-sans text-xs font-semibold transition-colors',
-                hasCopied ? 'border-accent/60 text-accent' : 'border-line text-ink-muted hover:border-accent/60 hover:text-ink'
+                hasCopied ? 'border-accent/60 text-accent' : 'border-ink/40 text-ink-muted hover:border-accent/60 hover:text-ink'
             )}
         >
             <span aria-live="polite">{hasCopied ? 'Copied' : 'Copy'}</span>
